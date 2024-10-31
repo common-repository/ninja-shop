@@ -1,0 +1,63 @@
+<script type="text/template" id="tmpl-it-exchange-manage-tokens">
+    <h4>{{ data.i18n.manageTokens }}</h4>
+    <div class="ninja-shop-manage-tokens-list-container"></div>
+</script>
+
+<script type="text/template" id="tmpl-it-exchange-manage-tokens-token">
+    <div class="ninja-shop-manage-token-label-container">
+        <span class="ninja-shop-manage-token-label">{{ data.label.rendered }}</span>
+
+        <span class="ninja-shop-manage-token-label-details">
+            <# if ( data.cardImage ) { #>
+                <img src="{{ data.cardImage }}">
+            <# } #>
+            <span class="ninja-shop-manage-token-label-redacted">{{ data.redacted }}</span>
+
+            <# if ( data.expiration ) { #>
+                <span class="ninja-shop-manage-token-label-expiration">
+                    {{ itExchange.common.zeroise( data.expiration.month, 2 ) }} / {{ data.expiration.year }}
+                </span>
+            <# } #>
+        </span>
+    </div>
+
+    <div class="ninja-shop-manage-tokens-token-edit-container" style="display: none">
+        <label class="ninja-shop-manage-tokens-token-edit--label">
+            <span>{{ data.i18n.labelLabel }}</span>
+            <input type="text" class="ninja-shop-manage-tokens-token-edit--label-input" value="{{ data.label.raw }}"
+                   placeholder="{{ data.label.rendered }}">
+        </label>
+
+        <# if ( data.isExpirationEditable ) { #>
+            <label class="ninja-shop-manage-tokens-token-edit--expiration">
+                <span>{{ data.i18n.labelExpiration }}</span>
+                <input type="text" class="ninja-shop-manage-tokens-token-edit--expiration-input"
+                       value="{{ itExchange.common.zeroise( data.expiration.month, 2 ) }} / {{ data.expiration.year }}" placeholder="MM / YY">
+            </label>
+        <# } #>
+    </div>
+
+    <div class="ninja-shop-manage-tokens-token-action-container">
+        <button class="ninja-shop-dashicon-button ninja-shop-manage-tokens-token-action--edit">
+            <span class="screen-reader-text">{{ data.i18n.edit }}</span>
+        </button>
+
+        <button class="ninja-shop-dashicon-button ninja-shop-manage-tokens-token-action--save"
+                style="display: none;">
+            <span class="screen-reader-text">{{ data.i18n.save }}</span>
+        </button>
+
+        <button class="ninja-shop-dashicon-button ninja-shop-manage-tokens-token-action--cancel"
+                style="display: none;">
+            <span class="screen-reader-text">{{ data.i18n.cancel }}</span>
+        </button>
+
+        <button class="ninja-shop-dashicon-button ninja-shop-manage-tokens-token-action--primary">
+            <span class="screen-reader-text">{{ data.i18n.makePrimary }}</span>
+        </button>
+
+        <button class="ninja-shop-dashicon-button ninja-shop-manage-tokens-token-action--delete">
+            <span class="screen-reader-text">{{ data.i18n.delete }}</span>
+        </button>
+    </div>
+</script>

@@ -1,0 +1,424 @@
+.ninja-shop-super-widget {
+    width:      100%;
+    background: #FFF;
+    color:      #111;
+    overflow:   hidden;
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing:    border-box;
+        box-sizing:         border-box;
+    }
+    a {
+        text-decoration: none;
+    }
+    p {
+        text-align: center;
+    }
+    select {
+        max-width: 100%;
+    }
+    input[type="checkbox"] + label {
+        display: inline !important;
+    }
+    .item-count {
+        padding: 1em;
+        text-align: center;
+        border-bottom: 1px solid #F0F0F0;
+        line-height: 1.5;
+    }
+    .purchase-options {
+        background: #F6F6F6;
+        font-size: 18px;
+        padding: 0px;
+        label {
+            display: inline-block;
+            font-weight: normal;
+        }
+        .ninja-shop-base-price {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .product-purchase-quantity {
+            display: inline-block;
+            margin: 0 0 16px 16px;
+            width: 60px;
+            text-align: center;
+        }
+        form {
+            padding: 10px 16px;
+        }
+    }
+    .ninja-shop-sw-product {
+        .purchase-options {
+            p.out-of-stock{
+                margin: 0;
+            }
+        }
+        .buy-now-button,
+        .add-to-cart-button {
+            width: 100%;
+        }
+    }
+    .cart-items-wrapper {
+        background: #F6F6F6;
+        padding: 10px;
+        .cart-item {
+            padding: 1em;
+            border-bottom: 1px solid #F0F0F0;
+            a {
+                float: right;
+            }
+            .item-info {
+                font-size: .8em;
+                margin-top: 1em;
+                .cart-discount {
+                    display: block;
+                    margin-top: .5em;
+                }
+                input {
+                    max-width: 65px;
+                    text-align: center;
+                    display:inline;
+                }
+            }
+        }
+    }
+    .cart-totals-row {
+        text-align: right;
+        padding: 1em;
+        border-bottom: 1px solid #F0F0F0;
+        font-size: .8em;
+    }
+    .cart-total {
+        font-weight: bold;
+        font-size: 1em;
+    }
+    .total-cancel-wrapper {
+        overflow: hidden;
+        padding: 1em;
+        background: #F6F6F6;
+    }
+    .ninja-shop-empty-cart {
+        background: #424242;
+        color: #fff;
+        line-height: 9px;
+        box-shadow: 0 0 0 0;
+        float: right;
+        text-decoration: none;
+        padding: 6px 5px 5px 5px;
+        border-radius: 50%;
+        margin-top: 3px;
+        &:hover {
+            background: #ff0000;
+        }
+    }
+    .payment-methods-wrapper {
+        padding: 1em;
+        border-bottom: 1px solid #F0F0F0;
+        input[type="submit"] {
+            width: 100%;
+            margin: 5px 0;
+        }
+    }
+    .cart-actions-wrapper {
+        overflow: hidden;
+        font-size: .8em;
+        text-align: center;
+        .cart-action {
+            float: left;
+            width: 50%;
+            padding: 1em;
+            line-height: 38px;
+            &.checkout {
+                input{ width: 100%;
+            }
+        }
+        .cancel-update {
+            border-bottom: 1px solid #F0F0F0;
+        }
+    }
+    .two-actions {
+        .cart-action {
+            width: 50%;
+        }
+    }
+    .coupon {
+        padding: 1em;
+        border-bottom: 1px solid #F0F0F0;
+    }
+    .quantity {
+        padding: 1em;
+        border-bottom: 1px solid #F0F0F0;
+        input {
+            width:100%;
+        }
+    }
+    .remove-coupon {
+        float: right;
+    }
+    .ninja-shop-messages {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: .8em;
+        }
+        &.ninja-shop-notices {
+            li {
+                background: #ECFFDA;
+                color:#768B5E;
+            }
+        }
+        &.ninja-shop-errors {
+            li {
+                background: #FFF0F0;
+                color: #DB4343;
+            }
+        }
+    }
+    .empty-cart {
+        padding: .5em 0;
+    }
+}
+
+.widget_ninja-shop-super-widget
+    .ninja-shop-super-widget {
+        p:last-child {
+            margin-bottom: 0;
+            &.cart-empty {
+                margin: 1em;
+            }
+        }
+    }
+}
+
+/*.ninja-shop-super-widget .ninja-shop-sw-product,
+.ninja-shop-super-widget .ninja-shop-sw-processing{border:1px solid #F0F0F0;}*/
+
+/*.ninja-shop-super-widget .ninja-shop-sw-product .purchase-options{padding:1em;}*/
+/*.ninja-shop-super-widget .two-actions .cart-action:first-child{border-right:1px solid #F0F0F0;}*/
+
+
+
+
+/** ----------------------------------------:[ processing ]:--- */
+.ninja-shop-super-widget {
+    .ninja-shop-sw-processing-section {
+        padding: 1em;
+    }
+}
+
+/** ----------------------------------------:[ login & register ]:--- */
+.ninja-shop-super-widget {
+    .ninja-shop-sw-processing-login,
+    .ninja-shop-sw-processing-registration {
+        padding: 1em;
+    }
+    .ninja-shop-sw-log-in {
+        .ninja-shop-username,
+        .ninja-shop-password {
+            margin-bottom: 1em;
+        }
+        label {
+            display: block;
+            font-size: .8em;
+            margin-bottom: .5em;
+        }
+        .rememberme {
+            label {
+                display: inline;
+            }
+        }
+        .recover_url {
+            margin-top: 1em;
+            margin-bottom: .4em;
+        }
+        .ninja-shop-login-button {
+            margin-bottom: 2em;
+        }
+        .ninja-shop-register-url {
+            margin-bottom: 5px;
+        }
+    }
+    .ninja-shop-sw-processing-login {
+        input[type="submit"],
+        input[type="button"],
+        .ninja-shop-recover-url {
+            margin-top: 1em;
+        }
+    }
+    .ninja-shop-sw-processing-registration {
+        .ninja-shop-guest-checkout-link {
+            margin-top: 5px;
+            display: block;
+        }
+    }
+    .ninja-shop-sw-register {
+        label {
+            display: block;
+            font-size: .8em;
+            margin-bottom: .5em;
+        }
+        div {
+            margin-bottom: 1em;
+        }
+        input#ninja-shop-register-customer {
+            margin-bottom: 2em;
+        }
+        div.cancel_url {
+            margin-bottom: 5px;
+        }
+    }
+    .cancel_url {
+        margin-top: .5em;
+    }
+}
+
+/** ----------------------------------------:[ shipping ]:--- */
+.ninja-shop-super-widget {
+    .cart-shipping-address-existing {
+        text-align: left;
+        font-size: 1em;
+        line-height: 1.5;
+        a {
+            float: right;
+        }
+    }
+    .ninja-shop-sw-shipping-address {
+        label {
+            display: block;
+            margin: 1em 0 .5em;
+        }
+        .ninja-shop-submit {
+            margin: 1em 0;
+        }
+    }
+    .cart-shipping-method-existing {
+        font-size: 1em;
+        a {
+            float: right;
+        }
+        p {
+            margin: 0;
+            text-align: left;
+        }
+    }
+    .ninja-shop-checkout-shipping-method-purchase-requirement {
+        margin: 0;
+    }
+    .ninja-shop-super-widget-shipping-method-cancel-action {
+        display: block;
+        padding: 1em;
+        background: #FFF;
+        border-top: 1px solid #F0F0F0;
+        text-align: center;
+        font-size: .8em;
+    }
+}
+
+/** ----------------------------------------:[ billing ]:--- */
+.ninja-shop-super-widget {
+    .cart-billing-address-existing {
+        text-align: left;
+        font-size: 1em;
+        line-height: 1.5;
+        a {
+            float: right;
+        }
+    }
+    .ninja-shop-sw-billing-address {
+        label {
+            display: block;
+            margin: 1em 0 .5em;
+        }
+        .ninja-shop-submit {
+            margin: 1em 0;
+        }
+    }
+}
+
+/** ----------------------------------------:[ order notes ]:--- */
+.ninja-shop-super-widget {
+    .cart-customer-order-note {
+        text-align: left;
+        font-size: 1em;
+        line-height: 1.5;
+        a {
+            float: right;
+        }
+    }
+    .ninja-shop-sw-processing-customer-order-note {
+        padding: 0 20px;
+        p {
+            text-align: left;
+            font-style: oblique;
+            opacity: .8;
+            max-width: 270px;
+            padding-top: 5px;
+            margin-bottom: 0;
+        }
+        label {
+            display: block;
+            margin: 1em 0 .5em;
+        }
+        .ninja-shop-submit {
+            margin: 1em 0;
+        }
+        textarea {
+            min-width: 230px;
+            width: 100%;
+            resize: vertical;
+        }
+    }
+    .ninja-shop-customer-order-note-actions {
+        text-align: right;
+        width: 100%;
+    }
+    .ninja-shop-customer-order-note-cancel {
+        padding-right: 5px;
+    }
+}
+
+/** ----------------------------------------:[ guest checkout ]:--- */
+.ninja-shop-super-widget {
+    .ninja-shop-sw-processing-guest-checkout {
+        padding: 1em;
+        .email-name input,
+        .save_url input {
+            width:100%;
+        }
+        h3.in-super-widget {
+            margin: 0 0 .75em;
+        }
+    }
+    .ninja-shop-guest-checkout-form {
+        div {
+            margin-bottom: 2em;
+        }
+        .email-name,
+        .register_url {
+            margin-bottom: 5px;
+        }
+        .cancel_url {
+            margin-bottom: 0;
+        }
+        input {
+            margin: 0;
+        }
+    }
+}
+
+/** ----------------------------------------:[ guest checkout (background image set inline)]:--- */
+.ninja-shop-super-widget {
+    .spinner {
+        background-size: 16px 16px;
+        display: none;
+        opacity: .7;
+        filter: alpha(opacity=70);
+        width: 16px;
+        height: 16px;
+        margin: 0 0 5px 5px;
+        display: inline-block;
+    }
+}

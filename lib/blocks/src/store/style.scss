@@ -1,0 +1,210 @@
+.ninja-shop-products {
+	.ninja-shop-product {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.ninja-shop-product-title {
+		line-break: 1;
+		margin: 0;
+	}
+
+	.ninja-shop-product-feature-image {
+		line-height: 0;
+	}
+
+	&.grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		min-width: 1px;
+
+		li {
+			flex-basis: 45%;
+			flex-grow: 0;
+			flex-shrink: 0;
+			margin: 0 15px 30px;
+		}
+
+		&.three-columns li {
+			flex-basis: 29%;
+		}
+	
+		&.four-columns li {
+			flex-basis: 21%;
+		}
+	
+		&.five-columns li {
+			flex-basis: 16%;
+		}
+	
+		&.six-columns li {
+			flex-basis: 13%;
+		}
+	}
+
+	@supports (display: grid) {
+		&.grid {
+			display: grid;
+			flex-direction: unset;
+			flex-wrap: unset;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 30px;
+			min-width: none;
+
+			.ninja-shop-product-details {
+				background: #ffffff;
+			}
+
+			li {
+				flex-basis: unset;
+				flex-grow: unset;
+				flex-shrink: unset;
+				margin: 0;
+			}
+
+			&.three-columns {
+				grid-template-columns: 1fr 1fr 1fr;
+
+				h2 {
+					font-size: 2.25em;
+				}
+			}
+		
+			&.four-columns {
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				
+				h2 {
+					font-size: 2em;
+				}
+			}
+		
+			&.five-columns {
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+				h2 {
+					font-size: 1.5em;
+				}
+			}
+		
+			&.six-columns {
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+				h2 {
+					font-size: 1.25em;
+				}
+			}
+		}
+
+		
+	}
+
+	&.option-1.grid {
+		.ninja-shop-product {
+			box-shadow: 0 0 10px rgba(0,0,0,0.08);
+		}
+	}
+
+	&.option-2.grid {
+		.ninja-shop-product {
+			position: relative;
+		}
+
+		.ninja-shop-product-feature-image {
+			border-radius: 4px;
+		}
+
+		.ninja-shop-base-price {
+			background-color: rgba(0,0,0,0.65);
+			border-radius: 4px;
+			color: #FFFFFF;
+			line-height: 1;
+			padding: 4px 6px;
+			position: absolute;
+			right: 7px;
+			top: 7px;
+		}
+	}
+
+	&.list {
+		display: block;
+
+		.ninja-shop-product {
+			display: flex;
+			margin-bottom: 30px;
+		}
+
+		.ninja-shop-product-feature-image {
+			width: 20%;
+		}
+
+		&.option-1 {
+			.ninja-shop-product-details {
+				background: #ffffff;
+				min-width: 350px;
+				padding: 15px 30px;
+
+				.ninja-shop-product {
+					box-shadow: 0 0 10px rgba(0,0,0,0.08);
+				}
+			}
+
+			.ninja-shop-product-title {
+				font-size: 1.5em;
+			}
+		}
+
+		&.option-2 {
+			.ninja-shop-product {
+				position: relative;
+			}
+
+			.ninja-shop-product-feature-image {
+				margin-right: 15px;
+			}
+
+			.ninja-shop-base-price {
+				background-color: rgba(0,0,0,0.65);
+				border-radius: 4px;
+				color: #FFFFFF;
+				line-height: 1;
+				padding: 4px 6px;
+				position: absolute;
+				left: 7px;
+				top: 7px;
+			}
+		}
+	}
+	
+	&.option-1 {
+		.ninja-shop-product-title {
+			font-size: 1.5em;
+
+			&:before {
+				background: none;
+				content: none;
+			}
+		}
+
+		.ninja-shop-base-price {
+			font-size: .75em;
+		}
+	}
+
+	&.option-2 {
+		.ninja-shop-product-title {
+			font-size: 1.5em;
+
+			&:before {
+				background: none;
+				content: none;
+			}
+		}
+
+		.ninja-shop-base-price {
+			font-size: .75em;
+		}
+	}
+}

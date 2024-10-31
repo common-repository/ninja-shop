@@ -1,0 +1,82 @@
+.ninja-shop-products {
+	.ninja-shop-product {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.ninja-shop-product-feature-image {
+		line-height: 0;
+	}
+
+	&.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
+
+		.ninja-shop-product-details {
+			background: #ffffff;
+			padding: 15px;
+		}
+	}
+
+	&.three-columns {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	&.four-columns {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	&.five-columns {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	&.six-columns {
+		grid-template-columns: 1fr 1fr 1fr  1fr 1fr 1fr;
+	}
+
+	&.list {
+		display: block;
+
+		.ninja-shop-product {
+			display: flex;
+			margin-bottom: 2em;
+		}
+
+		.ninja-shop-product-feature-image {
+			width: 20%;
+		}
+
+		&.option-1 {
+
+			.ninja-shop-product-details {
+				background: #ffffff;
+				min-width: 350px;
+				padding: 15px 30px;
+			}
+
+			.ninja-shop-product-title {
+				font-size: 1.25em;
+			}
+		}
+	}
+	
+	&.option-1 {
+
+		.ninja-shop-product-title {
+			font-size: 1.5em;
+
+			&:before {
+				background: none;
+				content: none;
+			}
+		}
+
+		.ninja-shop-base-price {
+			font-size: .75em;
+		}
+
+	}
+}

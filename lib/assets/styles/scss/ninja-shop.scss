@@ -1,0 +1,2279 @@
+/**
+ * Structural styles for iThemes Exchange elements.
+*/
+/** -----------------------------------------------------:[ global ]:---------- */
+.ninja-shop-wrap {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.ninja-shop-clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.ninja-shop-left {
+    float: left;
+}
+
+.ninja-shop-right {
+    float: right;
+}
+
+.ninja-shop-clear-left {
+    clear: left;
+    overflow: hidden;
+}
+
+.ninja-shop-clear-right {
+    clear: right;
+    overflow: hidden;
+}
+
+.ninja-shop-clear-both {
+    clear: both;
+    overflow: hidden;
+}
+
+a.ninja-shop-button {
+    text-decoration: none;
+}
+
+/** -----------------------------------------------------:[ table ]:---------- */
+.ninja-shop-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    // border: 1px solid #DDD;
+    border-bottom: none;
+    border-collapse: collapse;
+}
+
+.ninja-shop-table-row {
+    display: table-row-group;
+    overflow: hidden;
+    width: 100%;
+    // border-bottom: 1px solid #DDD;
+    margin: 10px;
+}
+
+.ninja-shop-table-inner-row {
+    display: table-row;
+}
+
+.ninja-shop-table-column {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ninja-shop-table-column-inner {
+    padding: 10px;
+}
+
+/** -----------------------------------------------------:[ inputs ]:---------- */
+.ninja-shop-wrap select {
+    max-width: 100%;
+}
+
+/** -----------------------------------------------------:[ columns ]:---------- */
+.ninja-shop-columns-wrapper {
+    overflow: hidden;
+}
+
+.ninja-shop-column {
+    float: left;
+}
+
+/** -----------------------------------------------------:[ account ]:---------- */
+.ninja-shop-account {
+    label {
+        display: block;
+        margin-top: 1em;
+    }
+    input[type="checkbox"] {
+        margin: 2em .5em 2em 0;
+        + label {
+            display: inline !important;
+        }
+    }
+    #wp-submit {
+        margin-bottom: 2em;
+    }
+    .ninja-shop-profile-save {
+        margin: 1.5em 0;
+    }
+}
+
+/** ----------------------------------------:[ navigation ]:--- */
+.ninja-shop-account,
+#ninja-shop-confirmation {
+    .ninja-shop-customer-menu {
+        list-style: none;
+        margin: 2em 0;
+        padding: 0;
+        li {
+            display: inline;
+            padding: 0;
+            margin: 0 1em 1em 0;
+            &.current {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/** ----------------------------------------:[ Profile ]:--- */
+
+.ninja-shop-customer-info-fields {
+    width: 100%;
+    input {
+        width: 100%;
+    }
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.ninja-shop-customer-first-name {
+    width: 40%;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.ninja-shop-customer-last-name {
+    width: 40%;
+    float: left;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.ninja-shop-customer-email {
+    width: 40%;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.ninja-shop-customer-nickname {
+    width: 40%;
+    float: left;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.ninja-shop-customer-website {
+    width: calc(80% + 10px);
+    float: left;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.ninja-shop-customer-password1 {
+    width: 40%;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.ninja-shop-customer-password2 {
+    width: 40%;
+    float: left;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.ninja-shop-manage-address-container h4 {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+.ninja-shop-customer-addresses-container {
+    width: 100%;
+    max-width: 37em;
+    padding: 10px 0 25px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.ninja-shop-customer-address {
+    border: 1px #ddd solid;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 1em;
+    width: 18em;
+    position: relative;
+    p {
+        margin: 0;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        &::before {
+            /* Hack to give enough space for the action buttons */
+            content: '';
+            float: right;
+            width: 70px;
+            height: 1em;
+        }
+    }
+    &.ninja-shop-customer-address--primary {
+        p::before {
+            width: 50px;
+        }
+    }
+}
+
+.ninja-shop-add-customer-address {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 1em;
+    width: 18em;
+    position: relative;
+    min-height: 130px;
+}
+
+.ninja-shop-customer-address.editing,
+.ninja-shop-add-customer-address.editing {
+    max-width: 37em;
+    width: 100%;
+    padding: 5px;
+    .ninja-shop-customer-addresses-edit-address {
+        label {
+            width: 17.5em;
+            margin-top: 0;
+            flex-grow: 1;
+            border: 5px solid transparent;
+            &.ninja-shop-address-form-field--address1 {
+                width: 36em;
+            }
+        }
+    }
+}
+
+.ninja-shop-customer-addresses-edit-address {
+    input,
+    select {
+        width: 100%;
+    }
+}
+
+.ninja-shop-customer-addresses-address-action-container {
+    top: 5px;
+    right: 8px;
+    position: absolute;
+}
+
+.ninja-shop-customer-addresses-address-action--edit::before {
+    content: "\f464";
+}
+
+.ninja-shop-customer-addresses-address-action--save::before {
+    content: "\f147";
+}
+
+.ninja-shop-customer-addresses-address-action--cancel::before {
+    content: "\f335";
+}
+
+.ninja-shop-customer-addresses-address-action--delete::before {
+    content: "\f182";
+}
+
+.ninja-shop-customer-addresses-address-action--primary::before {
+    content: "\f154";
+}
+
+.ninja-shop-customer-addresses-address-action--primary:hover::before {
+    content: "\f155";
+}
+
+.ninja-shop-customer-address--primary .ninja-shop-customer-addresses-address-action--primary::before {
+    content: "\f155";
+}
+
+.ninja-shop-customer-address--primary .ninja-shop-dashicon-button[disabled].ninja-shop-customer-addresses-address-action--primary {
+    opacity: 1;
+}
+
+button.ninja-shop-customer-addresses-address-action--primary:hover {
+    opacity: 1;
+}
+
+.ninja-shop-customer-addresses-address-action--create {
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+}
+
+.ninja-shop-customer-addresses-address-action--create::before {
+    content: "\f543";
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    opacity: 0.5;
+}
+
+.ninja-shop-customer-addresses-address-action--create:hover::before {
+    opacity: 1 !important;
+}
+
+.ninja-shop-customer-addresses-address-action--create:hover {
+    opacity: 1 !important;
+}
+
+.ninja-shop-customer-addresses-edit-address {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/** ----------------------------------------:[ purchases ]:--- */
+
+#ninja-shop-purchases {
+    .ninja-shop-purchase {
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+        .ninja-shop-purchase-top,
+        .ninja-shop-item-info {
+            overflow: hidden;
+        }
+    }
+    .ninja-shop-purchase-top {
+        margin-bottom: 1em;
+        .ninja-shop-purchase-total {
+            float: right;
+        }
+    }
+    .ninja-shop-purchase-items {
+        .ninja-shop-item-info {
+            margin-bottom: 1em;
+            .ninja-shop-item-thumbnail,
+            .ninja-shop-item-data {
+                float: left;
+            }
+        }
+        .ninja-shop-item-thumbnail {
+            width: 10%;
+            img {
+                margin: 0;
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+        .ninja-shop-item-data {
+            width: 90%;
+            div {
+                margin-left: 2em;
+            }
+            .ninja-shop-item-data-bottom div {
+                margin-left: 0;
+            }
+            .ninja-shop-item-data-top {
+                margin-bottom: 1em;
+            }
+            .ninja-shop-item-title {
+                font-weight: bold;
+            }
+            .ninja-shop-item-price,
+            .ninja-shop-item-quantity {
+                font-weight: normal;
+            }
+        }
+    }
+    .page-numbers {
+        list-style: none;
+        li {
+            display: inline;
+            padding: 0 10px;
+        }
+    }
+}
+
+/** ----------------------------------------:[ downloads ]:--- */
+#ninja-shop-downloads {
+    .ninja-shop-download {
+        clear: both;
+        span {
+            margin-left: 1em;
+        }
+    }
+    .ninja-shop-download-product {
+        float: right;
+        width: 20%;
+        a {
+            float: right;
+        }
+    }
+    .ninja-shop-download-info {
+        float: left;
+        width: 80%;
+        h4 {
+            margin-top: 0;
+        }
+        span + span {
+            margin-left: 1em;
+        }
+    }
+}
+
+/** -----------------------------------------------------:[ product ]:---------- */
+#ninja-shop-product {
+    .ninja-shop-product-no-images {
+        float: none;
+    }
+    .ninja-shop-product-has-images {
+        .ninja-shop-product-info {
+            width: 55%;
+            .product-column-inner {
+                margin-right: 2em;
+            }
+        }
+        .ninja-shop-product-images {
+            width: 45%;
+            .ninja-shop-column-inner {
+                margin-left: 1.5em;
+            }
+        }
+    }
+    .ninja-shop-product-standard-content {
+        margin-bottom: 2em;
+    }
+    .ninja-shop-product-sw {
+        margin-top: 2em;
+    }
+    .ninja-shop-extended-description {
+        margin-top: 2em;
+        padding-top: 2em;
+        border-top: 1px solid #EBEBEB;
+    }
+}
+
+.ninja-shop-product-price {
+    font-size: 2em;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    p {
+        margin: 0;
+        padding: .25em 0;
+    }
+    del {
+        opacity: .6;
+    }
+    ins {
+        color: #8cc53e;
+        background: inherit;
+        font-weight: 700;
+    }
+}
+
+.ninja-shop-product-sw {
+    margin-top: 2em;
+    // min-width: 330px;
+    width: 100%;
+}
+
+/** ----------------------------------------:[ gallery ]:--- */
+
+#ninja-shop-product {
+    .ninja-shop-product-images-gallery {
+        img {
+            display: block;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            border: 0;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        .ninja-shop-featured-image {
+            position: relative;
+            .ninja-shop-gallery-open {
+                position: absolute;
+                z-index: 11;
+                top: 10px;
+                right: 10px;
+                opacity: 0;
+                font-size: 1.5em;
+                padding: 10px;
+                background: rgba(0, 0, 0, .2);
+                border-radius: 3px;
+                color: #FFF;
+                text-decoration: none;
+                -webkit-transition: opacity .2s ease;
+                -moz-transition: opacity .2s ease;
+                transition: opacity .2s ease;
+                span {
+                    display: block;
+                    line-height: 1;
+                }
+            }
+            &:hover {
+                .ninja-shop-gallery-open {
+                    opacity: 1;
+                }
+            }
+            .featured-image-wrapper {
+                border: 1px solid transparent;
+                &.ninja-shop-zoom-enabled:hover {
+                    border-color: #EEE;
+                    cursor: pointer;
+                    cursor: -webkit-zoom-in;
+                    cursor: -moz-zoom-in;
+                }
+                &.ninja-shop-zooming:hover {
+                    cursor: crosshair;
+                    cursor: -webkit-zoom-out;
+                    cursor: -moz-zoom-out;
+                }
+            }
+        }
+        .ninja-shop-thumbnail-images {
+            list-style: none;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            li {
+                margin: 0;
+                float: left;
+                width: 33.33333%;
+                cursor: pointer;
+                span {
+                    display: block;
+                    margin-top: 10px;
+                    border: 1px solid #EEE;
+                    &.current {
+                        border-color: #AAA;
+                    }
+                }
+                &:nth-child(3n+1) span {
+                    margin-right: 4px;
+                }
+                &:nth-child(3n+2) span {
+                    margin-right: 2px;
+                    margin-left: 2px;
+                }
+                &:nth-child(3n+3) span {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+    .ninja-shop-product-images-gallery[data-popup="true"] {
+        .ninja-shop-featured-image {
+            cursor: pointer;
+        }
+    }
+}
+
+/** -----------------------------------------------------:[ cart & checkout ]:---------- */
+
+#ninja-shop-cart {
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+    input[autocomplete="off"]::-webkit-contacts-auto-fill-button {
+      visibility: hidden;
+      display: none !important;
+      pointer-events: none;
+      height: 0;
+      width: 0;
+      margin: 0;
+    }
+    .ninja-shop-cart-title-thumbnail,
+    .ninja-shop-cart-title-product,
+    .ninja-shop-cart-title-price,
+    .ninja-shop-cart-title-quantity,
+    .ninja-shop-cart-title-total,
+    .ninja-shop-cart-title-remove {
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .ninja-shop-cart-title-thumbnail {
+        width: 10%;
+    }
+    .ninja-shop-cart-title-product {
+        width: 50%;
+    }
+    .ninja-shop-cart-title-price {
+        width: 80px;
+    }
+    .ninja-shop-cart-title-quantity {
+        width: 110px;
+    }
+    .ninja-shop-cart-title-total {
+        width: 90px;
+    }
+    .ninja-shop-cart-title-remove {
+        width: 22px;
+    }
+    .ninja-shop-cart-item-thumbnail {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .ninja-shop-cart-item-product {
+    }
+    .ninja-shop-cart-item-price {
+        text-align: right;
+    }
+    .ninja-shop-cart-item-quantity {
+        input {
+            width: 100%;
+        }
+    }
+    .ninja-shop-cart-item-subtotal {
+        text-align: right;
+    }
+    .ninja-shop-cart-item-remove {
+        text-align: right;
+        a {
+            text-decoration: none;
+        }
+    }
+    .ninja-shop-line-item-description {
+        font-size: 80%;
+        margin-bottom: 0;
+    }
+    .ninja-shop-table-row-parent {
+        border-bottom-style: dotted;
+    }
+    .ninja-shop-child-item {
+        font-size: 80%;
+        border-bottom: none;
+        + div:not(.ninja-shop-child-item) {
+            // border-top: 1px solid #DDD;
+        }
+        .ninja-shop-line-item-name::before {
+            content: '-';
+            padding-right: 5px;
+        }
+    }
+    div.ninja-shop-table-row:last-of-type {
+        // border-bottom: 1px solid #DDD;
+    }
+    .ninja-shop-line-item-name-column {
+        width: 50%;
+    }
+    .ninja-shop-line-item-quantity-column {
+        width: 15%;
+        input {
+            width: 100%;
+        }
+    }
+    .ninja-shop-line-item-total-column {
+        width: 15%;
+        text-align: right;
+        .ninja-shop-table-column-inner {
+            &::before {
+                content: '(';
+                font-size: 80%;
+            }
+            &::before {
+                content: ')';
+                font-size: 80%;
+            }
+        }
+    }
+    #ninja-shop-line-items {
+        border-top: none;
+    }
+    &.ninja-shop-checkout {
+        .ninja-shop-cart-item-quantity {
+            width: 30px;
+            text-align: right;
+        }
+        .ninja-shop-cart-totals-amount {
+            width: 118px;
+            padding-right: 0;
+        }
+    }
+}
+
+.ninja-shop-existing-addresses-selector {
+    list-style: none;
+    margin-left: 0;
+    li {
+        list-style: none;
+        margin-left: 0;
+    }
+}
+
+/** ---:[ coupons ]:--- */
+
+#ninja-shop-cart-coupons {
+    border-top: 0;
+    .ninja-shop-cart-coupon-code {
+        width: 65%;
+        padding-left: 10%;
+    }
+}
+
+#ninja-shop-cart {
+    .ninja-shop-cart-coupon-discount {
+        width: 28%;
+        text-align: right;
+    }
+    .ninja-shop-cart-coupon-remove {
+        text-align: right;
+        width: 22px;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+/** ---:[ totals ]:--- */
+
+#ninja-shop-cart-totals {
+    // border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    float: right;
+    border-top: none;
+    border-right: 0;
+    .ninja-shop-table-row {
+        border-bottom: 0;
+    }
+    .ninja-shop-cart-totals-title {
+        text-align: right;
+        // border-right: 1px solid #DDDDDD
+    }
+    .ninja-shop-cart-totals-amount {
+        // border-right: 1px solid #DDDDDD;
+        text-align: right;
+        width: 132px;
+        padding-right: 26px;
+    }
+    .ninja-shop-cart-total {
+        font-weight: bold;
+        .ninja-shop-table-column-inner {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+/** ---:[ actions ]:--- */
+
+#ninja-shop-cart-actions {
+    overflow: hidden;
+    clear: both;
+    text-align: right;
+    float: right;
+    width: 100%;
+    .ninja-shop-continue-shopping {
+        &::before {
+            clear: both;
+            content: "";
+            display: block;
+            width: 100%;
+            margin-top: 1em;
+        }
+    }
+    .ninja-shop-cart-apply-coupons {
+        margin: 0 0 2em 0;
+        input[type=text] {
+            width: 70%;
+            float: left;
+        }
+        input[type=submit] {
+            width: 30%;
+        }
+    }
+}
+
+
+/** ---:[ purchase requirements ]:--- */
+
+#ninja-shop-checkout-purchase-requirements {
+    label {
+        display: block;
+        margin-top: 1em;
+    }
+    input[type="checkbox"] {
+        margin-right: .5em;
+        + label {
+            display: inline;
+        }
+    }
+    #wp-submit {
+        margin-bottom: 2em;
+    }
+    .ninja-shop-profile-save {
+        margin: 1.5em 0;
+    }
+    .ninja-shop-address1,
+    .ninja-shop-address2 {
+        input {
+            width: 95%;
+        }
+    }
+    &.ninja-shop-requirements-active {
+        margin-bottom: 5em;
+    }
+}
+
+.ninja-shop-checkout-purchase-requirements-notification {
+    margin: 1em 0;
+    padding: .75em 1em;
+    border-radius: 3px;
+    background: #EEE;
+    text-align: center;
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
+.ninja-shop-order-details {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
+/** ---:[ logged-in ]:--- */
+
+.ninja-shop-checkout-logged-in-purchase-requirement {
+    margin: 2em 0;
+}
+
+/** ---:[ shipping-billing-address ]:--- */
+
+.ninja-shop-checkout {
+    .ninja-shop-cart-item-thumbnail {
+        width: 10%;
+    }
+    .ninja-shop-cart-item-title {
+        width: 50%;
+    }
+    .ninja-shop-cart-item-price {
+        width: 80px;
+    }
+    .ninja-shop-cart-item-quantity {
+        width: 110px;
+    }
+    .ninja-shop-cart-item-subtotal {
+        width: 90px;
+    }
+    .ninja-shop-cart-item-remove {
+        width: 22px;
+    }
+    .ninja-shop-shipping-address-form {
+        .ninja-shop-left {
+            width: 45%;
+            margin-right: 5%;
+            input {
+                width: 100%;
+            }
+        }
+        .ninja-shop-submit {
+            padding: 1em 0;
+        }
+    }
+    .ninja-shop-billing-address-form {
+        .ninja-shop-left {
+            width: 45%;
+            margin-right: 5%;
+            input {
+                width: 100%;
+            }
+        }
+        .ninja-shop-submit {
+            margin: 1em 0;
+        }
+    }
+}
+
+.ninja-shop-checkout-shipping-address-purchase-requirement {
+    float: left;
+    width: 50%;
+}
+
+.ninja-shop-checkout-billing-address-purchase-requirement {
+    float: left;
+    width: 50%;
+}
+
+/** ---:[ shipping-method ]:--- */
+
+.ninja-shop-checkout-shipping-method-purchase-requirement {
+    margin: 3em 0 4em;
+}
+
+.ninja-shop-checkout {
+    .ninja-shop-itemized-checkout-methods {
+        overflow: hidden;
+        margin-top: 1em;
+        border: 1px solid #DDD;
+        border-bottom: none;
+    }
+    .ninja-shop-itemized-checkout-method {
+        padding: 1em;
+        border-bottom: 1px solid #DDD;
+    }
+}
+
+/** ---:[ customer order note ]:--- */
+
+.ninja-shop-checkout {
+    .ninja-shop-customer-order-note {
+        p {
+            margin-bottom: 5px;
+        }
+    }
+    .ninja-shop-customer-order-notes-form {
+        textarea {
+            width: 240px;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+    }
+    .ninja-shop-customer-order-note-actions {
+        width: 240px;
+        text-align: right
+    }
+    .ninja-shop-customer-order-note-cancel {
+        padding-right: 5px
+    }
+}
+
+/** -----------------------------------------------------:[ transaction methods ]:---------- */
+
+.ninja-shop-checkout {
+    .ninja-shop-checkout-transaction-methods {
+        form,
+        .ninja-shop-purchase-dialog-trigger {
+            margin-top: .5em;
+        }
+    }
+    .ninja-shop-checkout_cancel {
+        margin-top: .5em;
+    }
+}
+
+/** ---:[ guest checkout ]:--- */
+.ninja-shop-checkout {
+    .ninja-shop-guest-checkout-form-wrapper {
+        display: inline-block;
+        padding: 1em;
+        border: 1px solid #DDD;
+        border-radius: 3px;
+        margin-bottom: 1.5em;
+        h3 {
+            margin: 0 0 .5em;
+            font-weight: normal;
+        }
+        div input[type="submit"] {
+            margin: 0 0 0 .5em;
+        }
+    }
+    .ninja-shop-content-checkout-logged-in-purchase-requirement-links {
+        overflow: hidden;
+        div {
+            float: left;
+            margin-right: .5em;
+        }
+    }
+}
+
+/** ----------------------------------------:[ processing payment ]:--- */
+#ninja-shop-processing-payment {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    background: -webkit-radial-gradient(50% 50%, ellipse closest-corner, rgba(0, 0, 0, 0.45) 1%, rgba(0, 0, 0, 0.8) 100%);
+    background: -moz-radial-gradient(50% 50%, ellipse closest-corner, rgba(0, 0, 0, 0.45) 1%, rgba(0, 0, 0, 0.8) 100%);
+    background: -ms-radial-gradient(50% 50%, ellipse closest-corner, rgba(0, 0, 0, 0.45) 1%, rgba(0, 0, 0, 0.8) 100%);
+    background: radial-gradient(50% 50%, ellipse closest-corner, rgba(0, 0, 0, 0.45) 1%, rgba(0, 0, 0, 0.8) 100%);
+    text-align: center;
+    div {
+        position: absolute;
+        top: 45%;
+        width: 100%;
+    }
+    p {
+        margin-top: 10px;
+        color: #FFF;
+        font-size: 1.2em;
+        text-shadow: #000 1px 1px;
+    }
+    span {
+        width: 20px;
+        height: 20px;
+        border: 3px solid transparent;
+        display: inline-block;
+        border-radius: 50%;
+        -webkit-animation: stripe-processing-payment 1s 0 infinite alternate;
+        -moz-animation: stripe-processing-payment 1s 0 infinite alternate;
+        -o-animation: stripe-processing-payment 1s 0 infinite alternate;
+        animation: stripe-processing-payment 1s 0 infinite alternate;
+    }
+}
+
+@-webkit-keyframes stripe-processing-payment {
+    0% {
+        border-top-color: #FFF;
+    }
+    33% {
+        border-right-color: #FFF;
+    }
+    66% {
+        border-bottom-color: #FFF;
+    }
+    100% {
+        border-left-color: #FFF;
+    }
+}
+
+@-moz-keyframes stripe-processing-payment {
+    0% {
+        border-top-color: #FFF;
+    }
+    33% {
+        border-right-color: #FFF;
+    }
+    66% {
+        border-bottom-color: #FFF;
+    }
+    100% {
+        border-left-color: #FFF;
+    }
+}
+
+@-o-keyframes stripe-processing-payment {
+    0% {
+        border-top-color: #FFF;
+    }
+    33% {
+        border-right-color: #FFF;
+    }
+    66% {
+        border-bottom-color: #FFF;
+    }
+    100% {
+        border-left-color: #FFF;
+    }
+}
+
+@keyframes stripe-processing-payment {
+    0% {
+        border-top-color: #FFF;
+    }
+    33% {
+        border-right-color: #FFF;
+    }
+    66% {
+        border-bottom-color: #FFF;
+    }
+    100% {
+        border-left-color: #FFF;
+    }
+}
+
+/** -----------------------------------------------------:[ confirmation ]:---------- */
+
+#ninja-shop-confirmation {
+    .ninja-shop-transaction-meta {
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .ninja-shop-thank-you-message {
+        padding-bottom: 15px;
+    }
+    .ninja-shop-transaction-status .paid {
+        color: #6BC43F;
+    }
+    .ninja-shop-transaction-instructions {
+        margin-top: 1em;
+    }
+    .ninja-shop-confirmation-billing-address-purchase-requirement,
+    .ninja-shop-confirmation-shipping-address-purchase-requirement {
+        width: 50%;
+    }
+    .ninja-shop-column-inner {
+        padding: 20px;
+    }
+    .ninja-shop-transaction-products {
+        border-bottom: 0;
+        .ninja-shop-table-column-inner {
+            padding: 20px;
+        }
+    }
+    .ninja-shop-transaction-product {
+    }
+    .ninja-shop-transaction-product-details {
+        width: 80%;
+        .ninja-shop-featured-image {
+            max-width: 75px;
+            margin-right: 20px;
+            float: left;
+        }
+        h3 {
+            clear: none;
+            float: left;
+            margin: 23px 0;
+        }
+        .ninja-shop-transaction-product-no-featured-image h3 {
+            margin: 0 0 20px;
+        }
+    }
+    .ninja-shop-transaction-product-downloads h4 {
+        margin-bottom: 5px;
+    }
+    .ninja-shop-transaction-product-downloads-list {
+        list-style: none;
+        margin: 0;
+        li {
+            margin: 0 0 5px 10px;
+        }
+    }
+    .ninja-shop-transaction-product-cart-object {
+        width: 20%;
+    }
+    .ninja-shop-downloads-data li {
+        margin-left: 0;
+    }
+    .ninja-shop-transaction-summary-loop {
+        width: 220px;
+        float: right;
+        border-top: none;
+        border-bottom: none;
+        .ninja-shop-table-row {
+            border-bottom: 0;
+        }
+        .ninja-shop-table-column-inner {
+            padding: 10px 10px 0;
+        }
+        .ninja-shop-confirmation-totals-title {
+            text-align: right;
+        }
+        .ninja-shop-cart-totals-title {
+            text-align: right;
+        }
+        .ninja-shop-confirmation-totals-amount {
+        }
+        .ninja-shop-cart-totals-total .ninja-shop-table-column-inner {
+            padding: 10px;
+        }
+    }
+    .ninja-shop-line-item-description {
+        font-size: 80%;
+        margin-bottom: 0;
+    }
+    .ninja-shop-table-row-parent {
+        border-bottom-style: dotted;
+    }
+    .ninja-shop-child-item {
+        font-size: 80%;
+        border-bottom: none;
+        + div:not(.ninja-shop-child-item) {
+        }
+        .ninja-shop-line-item-name {
+            font-size: .8rem;
+            font-weight: normal;
+            &::before {
+                content: '-';
+                padding-right: 5px;
+            }
+        }
+        .ninja-shop-line-item-total-column-part {
+            &::before {
+                content: '(';
+                font-size: 80%;
+            }
+            &::after {
+                content: ')';
+                font-size: 80%;
+            }
+        }
+    }
+    div.ninja-shop-table-row:last-of-type {
+    }
+    #ninja-shop-line-items {
+        border-top: none;
+        .ninja-shop-table-column-inner{
+            padding: 20px;
+        }
+    }
+    .ninja-shop-line-item-name-column {
+        width: 80%;
+    }
+    .ninja-shop-line-item-quantity-total-column {
+        width: 20%;
+        input {
+            width: 100%;
+        }
+        .ninja-shop-table-column-inner {
+            padding-top: 0;
+        }
+    }
+    .ninja-shop-line-item-total-column {
+        width: 15%;
+        text-align: right;
+    }
+}
+
+
+/** -----------------------------------------------------:[ store ]:---------- */
+
+#ninja-shop-store {
+    .ninja-shop-products {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            display: block;
+            float: left;
+            width: 45%;
+            margin: 0 0 5em 0;
+            vertical-align: top;
+            &:nth-child(2n+1) {
+                margin-right: 5%;
+                clear: both;
+            }
+        }
+    }
+    .ninja-shop-product-details {
+        padding: 1em;
+        overflow: hidden;
+    }
+    .ninja-shop-product-title {
+        font-size: 1.5em;
+        margin: .5em 0;
+        padding: 0;
+        a {
+            text-decoration: none;
+        }
+    }
+    .ninja-shop-base-price {
+        font-size: 1.25em;
+        float: left;
+        del {
+            opacity: .6;
+        }
+        ins {
+            color: #8cc53e;
+            background: inherit;
+            font-weight: 700;
+        }
+    }
+    .ninja-shop-product-permalink {
+        float: right;
+        line-height: 2;
+    }
+    .featured-image-wrapper {
+        height: 250px;
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+/** -----------------------------------------------------:[ Error/Notice Notifications ]:---------- */
+
+.ninja-shop-wrap {
+    .ninja-shop-messages {
+        margin: 0 0 1em;
+        li {
+            margin: 0;
+        }
+    }
+}
+
+.ninja-shop-messages {
+    li {
+        list-style: none;
+        margin: 0;
+        padding: .75em 1em;
+        border-radius: 3px;
+    }
+    &.ninja-shop-errors {
+        li {
+            background: #FFF0F0;
+            color: #DB4343;
+        }
+    }
+    &.ninja-shop-notices {
+        li {
+            background: #ECFFDA;
+            color: #768B5E;
+        }
+    }
+}
+
+/** -------:[ Misc ]:--------------- */
+
+.ninja-shop-hidden {
+    display: none !important;
+}
+
+.ninja-shop-required-star {
+    color: #F35555;
+    margin-left: 3px;
+}
+
+/** -----------------------------------------------------:[ visual credit card ]:---------- */
+
+.ninja-shop-checkout {
+    .ninja-shop-visual-cc-wrap {
+        margin-top: 1em;
+    }
+    .ninja-shop-visual-cc {
+        float: right;
+    }
+}
+
+.ninja-shop-credit-card-selector {
+    padding-bottom: 10px;
+    label {
+        display: block;
+    }
+    + .ninja-shop-visual-cc-wrap {
+        display: none;
+    }
+}
+
+.ninja-shop-visual-cc-wrap {
+    margin-bottom: 1em;
+}
+
+.ninja-shop-visual-cc {
+    max-width: 300px;
+    background: #F5F5F5;
+    border: 1px solid #D6D6D6;
+    border-bottom-width: 2px;
+    border-radius: 4px;
+    input {
+        min-height: 35px;
+        outline: none;
+    }
+    .required {
+        color: #111;
+    }
+    .ninja-shop-column-inner {
+        padding: .5em;
+    }
+    .ninja-shop-visual-cc-holder {
+        .ninja-shop-column {
+            width: 50%;
+        }
+        input {
+            width: 100%;
+        }
+    }
+    .ninja-shop-cc-holder-first-name .ninja-shop-column-inner {
+        padding-right: .25em;
+    }
+    .ninja-shop-cc-holder-last-name .ninja-shop-column-inner {
+        padding-left: .25em;
+    }
+    .ninja-shop-visual-cc-name input {
+        width: 100%;
+        padding: 0 .25em;
+    }
+    .ninja-shop-cc-name-inner {
+        padding: .5em;
+    }
+    .ninja-shop-visual-cc-number {
+        input {
+            width: 100%;
+            margin: 0;
+            padding-right: 40px;
+            background-image: url('images/credit.png');
+            background-position: 98% 50%;
+            background-repeat: no-repeat;
+            font-family: Consolas, Monaco, Lucida Console, monospace;
+            &.card-visa {
+                background-image: url('images/visa.png');
+            }
+            &.card-mastercard {
+                background-image: url('images/mastercard.png');
+            }
+            &.card-amex {
+                background-image: url('images/amex.png');
+            }
+            &.card-discover {
+                background-image: url('images/discover.png');
+            }
+        }
+    }
+    .ninja-shop-cc-number-inner {
+        padding: 0 .5em;
+    }
+    .ninja-shop-visual-cc-expiration {
+        width: 70%;
+        input {
+            float: left;
+            width: 45%;
+            margin-right: .5em;
+            max-width: 45px;
+            font-family: Consolas, Monaco, Lucida Console, monospace;
+        }
+    }
+    .ninja-shop-visual-cc-code {
+        float: right;
+        width: 30%;
+        input {
+            width: 100%;
+            font-family: Consolas, Monaco, Lucida Console, monospace;
+        }
+    }
+}
+
+.ninja-shop-purchase-dialog .ninja-shop-payment-tokens-selector--list {
+    margin: 0 0 .5em 0;
+}
+
+/** -----------------------------------------------------:[ colorbox ]:---------- */
+
+.ninja-shop-colorbox {
+    &#cboxOverlay {
+        position: fixed;
+        z-index: 100000;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+    }
+    &#colorbox,
+    #cboxWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100001;
+        overflow: hidden;
+        outline: none;
+    }
+    img {
+        width: auto !important;
+        height: auto !important;
+        max-width: 100% !important;
+        &.zoomImg {
+            max-width: none !important;
+        }
+    }
+    #cboxContent {
+        position: relative;
+        opacity: 0;
+        #cboxPrevious,
+        #cboxNext,
+        #cboxClose,
+        #cboxSlideshow {
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            -webkit-transition: color 0.2s ease-in-out;
+            -moz-transition: color 0.2s ease-in-out;
+            -ms-transition: color 0.2s ease-in-out;
+            -o-transition: color 0.2s ease-in-out;
+            transition: color 0.2s ease-in-out;
+        }
+        #cboxPrevious,
+        #cboxNext {
+            top: 45%;
+            font-size: 3em;
+        }
+        #cboxPrevious {
+            left: 5px;
+        }
+        #cboxNext {
+            right: 5px;
+        }
+        #cboxClose {
+            top: 0;
+            right: 0;
+            font-size: 2em;
+            opacity: 0;
+            background: none;
+            border: none;
+        }
+        #cboxSlideshow {
+            position: absolute;
+            top: -0.2em;
+            right: 0;
+            font-size: 1em;
+        }
+        #cboxError {
+            padding: 50px;
+        }
+        #cboxTitle {
+            position: absolute;
+            top: -0.5em;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: 300;
+            font-size: 1.5em;
+        }
+        #cboxCurrent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    }
+}
+
+/** ----------------------------------------:[ light ]:--- */
+
+.ninja-shop-colorbox-light {
+    &#cboxOverlay {
+        background: #FFF;
+        background: rgba(255, 255, 255, .9);
+    }
+    #cboxContent {
+        #cboxPrevious,
+        #cboxNext,
+        #cboxClose,
+        #cboxSlideshow {
+            color: #000;
+            &:hover {
+                color: #888;
+            }
+        }
+    }
+    .ninja-shop-thumbnail-images {
+        li {
+            &:hover span {
+                border-color: #EEE;
+            }
+            .current {
+                border-color: #AAA;
+                box-shadow: #AAA 0 5px 10px -3px;
+            }
+        }
+    }
+}
+
+/** ----------------------------------------:[ dark ]:--- */
+
+.ninja-shop-colorbox-dark {
+    &#cboxOverlay {
+        background: #000;
+        background: rgba(255, 255, 255, .9);
+    }
+    #cboxContent {
+        #cboxPrevious,
+        #cboxNext,
+        #cboxClose,
+        #cboxSlideshow {
+            color: #FFF;
+            &:hover {
+                color: #888;
+            }
+        }
+    }
+    .ninja-shop-thumbnail-images {
+        li {
+            &:hover span {
+                border-color: #000;
+            }
+            .current {
+                border-color: #000;
+                box-shadow: #000 0 5px 10px -3px;
+            }
+        }
+    }
+}
+
+/** ----------------------------------------:[ gallery ]:--- */
+
+.ninja-shop-colorbox-gallery {
+    img {
+        margin: 0;
+        padding: 0;
+    }
+    .ninja-shop-product-images-gallery {
+        overflow: hidden;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .featured-image-wrapper {
+        display: inline-block;
+        border: 0;
+    }
+    .ninja-shop-featured-image {
+        text-align: center;
+        .ninja-shop-zoom-enabled:hover {
+            border-color: #EEE;
+            cursor: pointer;
+            cursor: -webkit-zoom-in;
+            cursor: -moz-zoom-in;
+        }
+        .ninja-shop-zooming:hover {
+            cursor: crosshair;
+            cursor: -webkit-zoom-out;
+            cursor: -moz-zoom-out;
+        }
+    }
+    .featured-image-wrapper {
+        display: inline-block;
+        border: 0;
+    }
+    .ninja-shop-thumbnail-images {
+        position: fixed;
+        bottom: 0;
+        right: 10%;
+        left: 10%;
+        overflow: hidden;
+        text-align: center;
+        li {
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+            img {
+                max-width: 75px !important;
+            }
+            span {
+                display: inline-block;
+                border: 1px solid transparent;
+                float: left;
+                -webkit-transition: margin .2s ease;
+                -moz-transition: margin .2s ease;
+                transition: margin .2s ease;
+            }
+        }
+    }
+    .ninja-shop-colorbox-light {
+        .ninja-shop-thumbnail-images {
+            li {
+                span:hover,
+                .current {
+                    margin-bottom: 5px;
+                }
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/** -----------------------------------------------------:[ Payment Tokens ]:---------- */
+
+.ninja-shop-payment-tokens-selector--list {
+    margin: 2em 0 !important;
+    padding: 0;
+    .ninja-shop-payment-tokens-selector--payment-token {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.ninja-shop-payment-tokens-selector--payment-token {
+    display: block;
+    border: 1px solid #ddd;
+    padding: .5em 1em;
+    margin-bottom: .5em;
+    transition: .2s ease-in opacity;
+    &:hover,
+    &:focus {
+        opacity: .8;
+        cursor: pointer;
+    }
+    label {
+        display: inline-block;
+        margin: 0 0 0 .5em;
+        vertical-align: middle;
+        width: 100%;
+        img {
+            vertical-align: middle;
+            padding-left: 5px;
+        }
+    }
+}
+
+/** -----------------------------------------------------:[ Backbone Checkout ]:---------- */
+
+.ninja-shop-checkout-line-items-container {
+    max-width: 400px;
+}
+
+.ninja-shop-checkout-line-items {
+    margin: 0 !important;
+    padding: 0 !important;
+    li {
+        list-style-type: none;
+        border-bottom: 1px solid #6b6b6b;
+        padding-bottom: 3px;
+        margin-bottom: 3px;
+        span {
+            display: inline-block;
+        }
+    }
+    .ninja-shop-checkout-line-item--product-image {
+        height: 2em;
+        margin-right: 5px;
+    }
+    li {
+        .ninja-shop-checkout-line-item--item-name {
+            width: 65%;
+        }
+        .ninja-shop-checkout-line-item--item-quantity {
+            width: 10%;
+            position: relative;
+            text-align: right;
+            &:before {
+                content: '\00d7';
+                position: absolute;
+                right: 8px;
+                bottom: .7px;
+                font-size: .8em;
+            }
+        }
+        .ninja-shop-checkout-line-item--item-total {
+            width: 20%;
+            text-align: right;
+            float: right;
+        }
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+    > li.ninja-shop-view > ul {
+        list-style-type: square;
+        margin: 5px 0 0 20px;
+        > li {
+            list-style-type: square;
+        }
+    }
+    ul:empty {
+        display: none;
+    }
+}
+
+.ninja-shop-checkout-line-item-totals-container {
+    max-width: 400px;
+    + .ninja-shop-checkout-line-item-totals-container {
+        border-top: 1px solid #666;
+        padding-top: 5px;
+        margin-top: 5px;
+    }
+}
+
+.ninja-shop-checkout-line-item-totals {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    li {
+        list-style-type: none;
+        border-bottom: 1px solid #6b6b6b;
+        padding-bottom: 3px;
+        margin-bottom: 3px;
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.ninja-shop-checkout-line-items-total--total {
+    float: right;
+    text-align: right;
+}
+
+.ninja-shop-checkout-coupon-container {
+    margin-bottom: 15px;
+    max-width: 400px;
+}
+
+.ninja-shop-checkout-coupon-input-container {
+    label {
+        display: inline-block;
+        margin-top: 0;
+        margin-right: 5px;
+        width: 70%;
+    }
+    input {
+        width: 100%;
+    }
+    span {
+        display: inline-block;
+        font-size: .7em;
+        text-transform: uppercase;
+    }
+    .ninja-shop-checkout-coupon-add {
+        width: 20%;
+    }
+    .ninja-shop-checkout-coupon-cancel {
+        width: auto;
+        background: none;
+        border: 0;
+        padding: 0;
+        margin: 0 0 0 10px;
+        vertical-align: middle;
+        color: initial;
+        font-weight: initial;
+        font-size: 1.2em;
+        transition: .2s ease-in opacity;
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+.ninja-shop-checkout-purchase-methods {
+    margin-left: 0;
+    li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0 5px 5px 0;
+    }
+}
+
+.ninja-shop-checkout-default-method--source {
+    &.ninja-shop-checkout-default-method--source--token {
+        display: inline-block;
+        cursor: default;
+    }
+}
+
+.ninja-shop-checkout-default-method--source--token {
+    .ninja-shop-payment-tokens-selector--payment-token {
+        &:hover,
+        &:focus {
+            opacity: 1;
+            cursor: default;
+        }
+    }
+}
+
+.ninja-shop-checkout-default-method--action-container .ninja-shop-payment-tokens-selector--payment-token {
+    margin-bottom: 0;
+}
+
+.ninja-shop-checkout-default-method--select-other {
+    font-size: .7em;
+    font-style: oblique;
+    &::before {
+        content: '(';
+    }
+    &::after {
+        content: ')';
+    }
+}
+
+.ninja-shop-checkout-payment-summary {
+    max-width: 320px;
+    width: 100%;
+    h4 {
+        text-align: center;
+        margin: 0 0 15px 0;
+        padding: 0;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        li {
+            &:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+            h5 {
+                font-size: 1rem;
+                height: 1em;
+                line-height: 1em;
+                text-transform: uppercase;
+                font-weight: normal !important;
+                letter-spacing: 1px;
+                float: left;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        div {
+            float: right;
+            height: 1rem;
+            font-size: 1em;
+            line-height: 1em;
+        }
+    }
+    li {
+        border-top: 1px solid #eee;
+        display: block;
+        clear: both;
+        padding: 10px 0 25px 0;
+    }
+    button {
+        display: block;
+        margin: 10px auto 0;
+    }
+}
+
+/** -----------------------------------------------------:[ Backbone Manage Tokens ]:---------- */
+
+.ninja-shop-manage-tokens-list {
+    margin: 2em 0;
+    padding: 0;
+    li {
+        display: block;
+        border: 1px solid #ddd;
+        padding: .5em 1em;
+        margin-bottom: .5em;
+        transition: .2s ease-in opacity;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+}
+
+.ninja-shop-manage-token-label-container {
+    float: left;
+}
+
+.ninja-shop-manage-token-label-details {
+    margin-left: 10px;
+    &::before {
+        content: '|';
+        margin-right: 8px;
+    }
+    img {
+        margin-bottom: 3px;
+        vertical-align: middle;
+    }
+}
+
+.ninja-shop-manage-token-label-redacted {
+    margin-left: 5px;
+    &::before {
+        content: '••••';
+        margin-right: 7px;
+    }
+}
+
+.ninja-shop-manage-token-label-expiration {
+    margin-left: 10px;
+}
+
+.ninja-shop-manage-tokens-token-edit-container {
+    display: inline-block;
+    margin: -15px 0 5px 0;
+    float: left;
+    .ninja-shop-manage-tokens-token-edit--label {
+        display: inline-block;
+    }
+    .ninja-shop-manage-tokens-token-edit--expiration {
+        display: inline-block;
+        width: 100px;
+        margin-left: 7px;
+    }
+    span {
+        display: block;
+        font-size: .7em;
+        text-transform: uppercase;
+    }
+}
+
+.ninja-shop-manage-tokens-token-action-container {
+    display: inline-block;
+    float: right;
+    .ninja-shop-dashicon-button {
+        vertical-align: middle;
+    }
+}
+
+.ninja-shop-manage-tokens-token-action--edit::before {
+    content: "\f464";
+}
+
+.ninja-shop-manage-tokens-token-action--save::before {
+    content: "\f147";
+}
+
+.ninja-shop-manage-tokens-token-action--cancel::before {
+    content: "\f335";
+}
+
+.ninja-shop-manage-tokens-token-action--delete::before {
+    content: "\f182";
+}
+
+.ninja-shop-manage-tokens-token-action--primary::before {
+    content: "\f154";
+}
+
+.ninja-shop-manage-tokens-token-action--primary:hover::before {
+    content: "\f155";
+}
+
+.ninja-shop-manage-tokens-token--primary .ninja-shop-manage-tokens-token-action--primary::before {
+    content: "\f155";
+}
+
+button.ninja-shop-manage-tokens-token-action.ninja-shop-manage-tokens-token-action--primary:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .ninja-shop-manage-token-label-container {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .ninja-shop-manage-token-label-details {
+        margin-left: 3px;
+        img {
+            display: none;
+        }
+        &::before {
+            margin-right: 2px;
+        }
+    }
+
+    .ninja-shop-manage-token-label-redacted::before {
+        content: 'x';
+        margin-right: 3px;
+        font-size: .6em;
+    }
+
+    .ninja-shop-manage-tokens-token-action-container {
+        display: block;
+        position: relative;
+        top: 5px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+}
+
+/** ----------------------------------------:[ Utility ]:--- */
+
+@-webkit-keyframes ninja-shop-breathing {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ninja-shop-breathing {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ninja-shop-dashicon-button,
+.ninja-shop-dashicon-button[disabled] {
+    background: none !important;
+    border: 0;
+    color: inherit !important;
+    /* cursor: default; */
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.ninja-shop-dashicon-button[disabled] {
+    opacity: .3;
+}
+
+.ninja-shop-dashicon-button::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 1;
+    font-family: dashicons;
+    text-decoration: inherit;
+    font-weight: normal;
+    font-style: normal;
+    vertical-align: top;
+    text-align: center;
+    -webkit-transition: color .1s ease-in 0;
+    transition: color .1s ease-in 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ninja-shop-dashicon-button:hover,
+.ninja-shop-dashicon-button:active,
+.ninja-shop-dashicon-button[disabled]:hover,
+.ninja-shop-dashicon-button[disabled]:active {
+    background: none;
+    background-color: transparent;
+    opacity: .5;
+    border: none;
+    padding: 0;
+}
+
+.ninja-shop-dashicon-button:hover::before,
+.ninja-shop-dashicon-button[disabled]:hover::before {
+    background: transparent;
+}
+
+.ninja-shop-view.saving {
+    -webkit-animation: ninja-shop-breathing 3.5s ease-out infinite normal;
+    animation: ninja-shop-breathing 3.5s ease-out infinite normal;
+}
+
+.ninja-shop-view.deleting {
+    opacity: .2;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+/** ----------------------------------------:[ Compat ]:--- */
+
+.ninja-shop button:disabled,
+.ninja-shop-wrap button:disabled {
+    opacity: .7;
+    cursor: progress;
+}
+
+.ninja-shop button:disabled:hover,
+.ninja-shop-wrap button:disabled:hover {
+    opacity: .7;
+    cursor: progress;
+}
+
+.screen-reader-text,
+.screen-reader-text span,
+.ui-helper-hidden-accessible {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+    word-wrap: normal !important; /* many screen reader and browser combinations announce broken words as they would appear visually */
+}
+
+.screen-reader-shortcut {
+    position: absolute;
+    top: -1000em;
+    &:focus {
+        left: 6px;
+        top: -25px;
+        height: auto;
+        width: auto;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 15px 23px 14px;
+        background: #f1f1f1;
+        color: #0073aa;
+        z-index: 100000;
+        line-height: normal;
+        -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+/** ----------------------------------------:[ screen fixes ]:--- */
+@media screen and (max-width: 1000px) {
+    .ninja-shop-colorbox .ninja-shop-product-images-gallery {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ninja-shop-colorbox .ninja-shop-product-images-gallery {
+        max-width: 300px;
+    }
+
+    #ninja-shop-product .ninja-shop-product-has-images .ninja-shop-product-info {
+        width: 100%;
+    }
+
+    #ninja-shop-product .ninja-shop-product-has-images .ninja-shop-product-images {
+        width: 100%;
+        margin-top: 2em
+    }
+
+    #ninja-shop-product .ninja-shop-product-has-images .ninja-shop-product-images .ninja-shop-column-inner {
+        margin-left: 0;
+    }
+}

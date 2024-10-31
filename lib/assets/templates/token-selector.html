@@ -1,0 +1,25 @@
+<script type="text/template" id="tmpl-ninja-shop-token-selector">
+    <ul class="ninja-shop-payment-tokens-selector--list"></ul>
+
+    <# if ( data.showAddNew ) { #>
+        <div class="ninja-shop-payment-tokens-selector--add-new-container"></div>
+    <# } #>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-token-selector-token">
+    <label>
+        <input type="radio" name="{{ data.inputName }}" value="{{ data.id }}">
+        {{ data.label.rendered }}
+
+        <# if ( data.cardImage ) { #>
+            <img src="{{ data.cardImage }}">
+        <# } #>
+    </label>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-token-selector-add-new">
+    <label>
+        <input type="radio" name="{{ data.inputName }}" value="add-new">
+        {{ data.i18n.addNewCard }}
+    </label>
+</script>

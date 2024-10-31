@@ -1,0 +1,116 @@
+<script type="text/template" id="tmpl-ninja-shop-checkout">
+
+    <# if ( data.showLineItems ) { #>
+        <div class="ninja-shop-checkout-line-items-container"></div>
+    <# } #>
+
+    <# if ( data.showLineItemTotals ) { #>
+        <div class="ninja-shop-checkout-line-item-totals-container"></div>
+    <# } #>
+
+    <# if ( data.showCouponEntry ) { #>
+        <div class="ninja-shop-checkout-coupon-container"></div>
+    <# } #>
+
+    <div class="ninja-shop-checkout-default-method-container"></div>
+
+    <ul class="ninja-shop-checkout-purchase-methods"></ul>
+
+    <div class="ninja-shop-checkout-additional-info-container"></div>
+
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-checkout-line-item">
+    <span class="ninja-shop-checkout-line-item--item-name">{{ data.name }}</span>
+    <# if ( data.showQuantity ) { #>
+        <span class="ninja-shop-checkout-line-item--item-quantity">{{ data.quantity.selected }}</span>
+    <# } #>
+    <span class="ninja-shop-checkout-line-item--item-total">{{ data.totalFormatted }}</span>
+    <ul></ul>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-checkout-line-item--product">
+    <span class="ninja-shop-checkout-line-item--item-name">
+         <# if ( data.image && data.showImage ) { #>
+            <img src="{{ data.image }}" class="ninja-shop-checkout-line-item--product-image">
+        <# } #>
+        {{ data.name }}
+    </span>
+    <span class="ninja-shop-checkout-line-item--item-quantity">{{ data.quantity.selected }}</span>
+    <span class="ninja-shop-checkout-line-item--item-total">{{ data.totalFormatted }}</span>
+    <ul></ul>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-checkout-line-items-total">
+    <span class="ninja-shop-checkout-line-items-total--label">{{data.label}}</span>
+    <span class="ninja-shop-checkout-line-items-total--total">{{data.totalFormatted}}</span>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-checkout-coupon">
+    <a href="#" class="ninja-shop-checkout-have-coupon-prompt"> {{ data.i18n.haveCoupon }} </a>
+    <div class="ninja-shop-checkout-coupon-input-container" style="display: none">
+        <label>
+            <span> {{ data.i18n.couponCode }} </span>
+            <input type="text" class="ninja-shop-checkout-coupon-input">
+        </label>
+        <button class="ninja-shop-checkout-coupon-add"> {{ data.i18n.addCoupon }}</button>
+        <button class="ninja-shop-checkout-coupon-cancel">
+            &times;
+            <span class="screen-reader-text"> {{ data.i18n.cancel }} </span>
+        </button>
+    </div>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-checkout-purchase-method-button">
+    <button class="ninja-shop-purchase-button ninja-shop-purchase-button-{{ data.id }} ninja-shop-checkout-purchase-method-button btn button">
+        {{ data.label }}
+    </button>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-checkout-complete-purchase-method-button">
+    <button class="ninja-shop-checkout-complete-purchase-method-button btn button">
+        {{ data.completePurchase }}
+    </button>
+    <button class="ninja-shop-checkout-cancel-purchase-method btn button">
+        {{ data.cancel }}
+    </button>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-checkout-default-method">
+
+    <div class="ninja-shop-checkout-default-method--action-container">
+        <div class="ninja-shop-checkout-default-method--source"></div>
+        <button class="ninja-shop-checkout-default-method--action">{{ data.i18n.purchaseDefaultMethod }}</button>
+    </div>
+
+    <a href="#" class="ninja-shop-checkout-default-method--select-other">{{ data.i18n.otherPaymentMethod }}</a>
+</script>
+
+<script type="text/template" id="tmpl-ninja-shop-checkout-payment-summary">
+
+    <h4>{{ data.i18n.paymentSummary }}</h4>
+
+    <ul>
+        <li>
+            <h5>{{ data.i18n.total }}</h5>
+            <div>{{ data.totalFormatted }}</div>
+        </li>
+        <li>
+            <h5>{{ data.i18n.date }}</h5>
+            <div>{{ data.dateFormatted }}</div>
+        </li>
+        <# if ( data.payment && data.payment.label ) { #>
+            <li>
+                <h5>{{ data.i18n.method }}</h5>
+                <div>{{ data.payment.label }}</div>
+            </li>
+        <# } #>
+        <li>
+            <h5>{{ data.i18n.order }}</h5>
+            <div>{{ data.order_number }}</div>
+        </li>
+    </ul>
+
+    <button role="link" class="button btn">{{ data.i18n.viewDetails }}</button>
+
+</script>
